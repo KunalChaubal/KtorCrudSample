@@ -1,7 +1,7 @@
 package com.helloworld.example
 
 import com.helloworld.example.repository.CustomerRepo
-import com.helloworld.example.route.getCustomer
+import com.helloworld.example.route.customer
 import io.ktor.application.*
 import io.ktor.features.ContentNegotiation
 import io.ktor.gson.gson
@@ -20,7 +20,7 @@ fun main() {
         }
         routing {
             helloWorld()
-            getCustomer(customerRepo = CustomerRepo())
+            customer(customerRepo = CustomerRepo())
         }
     }
     server.start(wait = true)
